@@ -3,10 +3,11 @@
   "version": "1.0.0",
   "description": "Ejemplo basico uso de JavaScript",
   "main": "ejercicio1.js",
-  "type" : "module",
-  "author" : "Oscar MC",
-  "license" : "ISC",
+  "type": "module",
+  "author": "Oscar MC",
+  "license": "ISC",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-    "lanzar" : "node ejercicio.js"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lanzar": "node ejercicio1.js"
   }
+}
