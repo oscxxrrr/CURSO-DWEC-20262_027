@@ -21,6 +21,16 @@ const celToKel = (celsius) => {
 const cToK = ( c ) => c + 273.15
 
 // funcion que le pase como parametro 2 numeros y me los ordene
+const num1 = Number(prompt("Dime un numero: "))
+const num2 = Number(prompt("Dame otro numero: "))
+
+if(num1 > num2){
+  console.log("El numero " + num1 + " es mayor que " + num2)
+}else if(num2 > num1){
+  console.log("El numero " + num2 + " es mayor que " + num1)
+}else{
+  console.log("Son iguales")
+}
 
 
 

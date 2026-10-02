@@ -1,4 +1,4 @@
-document.querySelector('#app').innerHTML = `
+document.zquerySelector('#app').innerHTML = `
 <section id="center">
 <h1> Hola Mundo </h1>
   </section>
@@ -7,3 +7,4 @@ document.querySelector('#app').innerHTML = `
 <div class="ticks"></div>
 <section id="spacer"></section>
 `
+
