@@ -8,14 +8,10 @@ import type { Product } from "../../../types/product";
  * @param id especifico para ver su precio
  * @returns number or null
  */
-export function priceOf(list: Product[], id: number): number | nul {
+export function priceOf(list: Product[], id: number): number | null {
   const product = list.find((prod) => prod.id == id);
 
-  if (product === undefined) {
-    return null;
-  } else {
-    return product.price;
-  }
+  return product === undefined ? null : product.price;
 }
 
 // Pregunta ¿Por que no es buena idea devolver 0 cuando el producto no existe?

@@ -8,5 +8,7 @@ import type { Product } from "../../../types/product";
  * @returns string[]
  */
 export function soldOut(list: Product[]): string[] {
-  return list.filter((prod) => prod.stock === 0).map((producto) => producto.name);
+  return list
+    .filter((prod) => prod.stock === 0)
+    .map((producto) => producto.name);
 }

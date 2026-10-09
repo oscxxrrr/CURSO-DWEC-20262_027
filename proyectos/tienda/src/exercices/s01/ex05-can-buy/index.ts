@@ -11,9 +11,6 @@ import type { Product } from "../../../types/product";
  */
 export function canBuy(list: Product[], id: number, quantity: number): boolean {
   const product = list.find((prod) => prod.id === id);
-  if (product === undefined) {
-    return false;
-  }
 
-  return quantity > 0 && quantity <= product.stock;
+  return product !== undefined && quantity > 0 && quantity <= product.stock;
 }
