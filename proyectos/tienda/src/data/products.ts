@@ -1,5 +1,5 @@
 // TechStore Oscar Martinez Cabrera
-import type { CartLine } from '../types/cart';
+import type { Cart } from '../types/cart';
 import type { Product } from '../types/product';
 
 export const products: Product[] = [
