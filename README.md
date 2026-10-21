@@ -1,60 +1,44 @@
+<!-- ====================== BANNER ====================== -->
 <p align="center">
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:1E3A8A,50:2563EB,100:60A5FA&height=200&section=header&text=Pr%C3%A1cticas%20en%20TypeScript&fontSize=42&fontColor=ffffff&fontAlignY=40&desc=Desarrollo%20Web%20en%20Entorno%20Cliente%20(DAW)&descAlignY=65&descAlign=50&animation=fadeIn" alt="Banner"/>
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:1E3A8A,50:2563EB,100:60A5FA&height=200&section=header&text=Pr%C3%A1cticas%20en%20TypeScript&fontSize=42&fontColor=ffffff&fontAlignY=40&desc=Desarrollo%20Web%20en%20Entorno%20Cliente%20(DAW)&descAlignY=65&descAlign=50&animation=fadeIn" alt="Banner"/>
 </p>
 
-📌 Sobre el repositorio
+---
 
-Este repositorio contiene una recopilación de ejercicios prácticos, laboratorios y bloques de código en TypeScript, desarrollados durante el segundo curso del Ciclo Formativo de Grado Superior en Desarrollo de Aplicaciones Web (DAW) en el I.E.S. Politécnico Hermenegildo Lanz.
+## 📌 Sobre el Repositorio
 
-El objetivo es afianzar los conocimientos de programación orientada a objetos, tipado estático, modularidad y desarrollo moderno del lado del cliente, utilizando un entorno de desarrollo optimizado con WSL.
+Este repositorio contiene la recopilación de **ejercicios prácticos, laboratorios y bloques de código en TypeScript** desarrollados durante el segundo curso del Ciclo Formativo de Grado Superior en Desarrollo de Aplicaciones Web (DAW) en el **I.E.S. Politécnico Hermenegildo Lanz**.
 
-🛠️ Tecnologías y herramientas
+El objetivo de este espacio es afianzar la programación orientada a objetos, el tipado estático, la modularidad y el desarrollo moderno del lado del cliente utilizando un entorno optimizado con **WSL**.
 
-!TypeScript !JavaScript !Node.js !Git !GitHub !WSL
+---
 
-📂 Contenido y prácticas
+## 🛠️ Tecnologías y Herramientas
 
-El código está organizado para trabajar diferentes conceptos fundamentales de TypeScript y JavaScript avanzado:
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
+![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
+![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)
+![WSL](https://img.shields.io/badge/WSL-0078D6?style=for-the-badge&logo=linux&logoColor=white)
 
-Tipado estático e interfaces: definición de tipos personalizados, interfaces y tipos avanzados.
-Programación orientada a objetos (POO): clases, modificadores de acceso, herencia e implementación de interfaces.
-Funciones y genéricos: creación de funciones tipadas y componentes reutilizables mediante genéricos.
-Manipulación del DOM y eventos: ejercicios centrados en la interacción dinámica con páginas web.
-🚀 Cómo ejecutar las prácticas localmente
+---
 
-Para descargar, instalar y ejecutar las prácticas en tu equipo, se recomienda utilizar una terminal en WSL.
+## 📂 Contenido y Prácticas
 
-1. Clonar el repositorio
-git clone https://github.com/oscxxrrr/CURSO-DWEC-20262_027.git
+El código está estructurado para abordar diferentes conceptos clave de TypeScript y JavaScript avanzado:
 
-2. Acceder al directorio del proyecto
-cd CURSO-DWEC-20262_027
+- **Tipado Estático y Interfaces:** Definición de tipos personalizados, interfaces y tipos avanzados.
+- **Programación Orientada a Objetos (POO):** Clases, modificadores de acceso, herencia e implementación de interfaces.
+- **Funciones y Genéricos:** Uso de funciones tipadas y componentes reutilizables mediante genéricos.
+- **Manipulación del DOM y Eventos:** Prácticas orientadas a la interacción dinámica en páginas web.
 
-3. Instalar las dependencias
-npm install
+---
 
-4. Ejecutar las prácticas
+## 🚀 Cómo ejecutar las prácticas localmente
 
-Para iniciar el servidor de desarrollo y probar las prácticas interactivas en tiempo real:
+Para poner en marcha y probar las prácticas de este repositorio en tu equipo (preferiblemente desde tu terminal en WSL), sigue estos pasos:
 
-npm run dev
-
-5. Compilar TypeScript
-
-Si deseas compilar manualmente el código TypeScript a JavaScript, ejecuta:
-
-npx tsc
-
-Nota: Los comandos disponibles pueden variar según la configuración del proyecto y los scripts definidos en package.json.
-🌐 Conectemos
-👨‍💻 Autor
-
-Oscar
-
-Estudiante de segundo año de DAW en el I.E.S. Politécnico Hermenegildo Lanz.
-
-GitHub: @oscxxrrr
-
-<p align="center">
-Desarrollado con 💙 y TypeScript.
-</p>
+1. **Clona el repositorio:**
+   ```bash
+   git clone [https://github.com/oscxxrrr/CURSO-DWEC-20262_027.git](https://github.com/oscxxrrr/CURSO-DWEC-20262_027.git)
