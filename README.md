@@ -42,3 +42,25 @@ Para poner en marcha y probar las prácticas de este repositorio en tu equipo (p
 1. **Clona el repositorio:**
    ```bash
    git clone [https://github.com/oscxxrrr/CURSO-DWEC-20262_027.git](https://github.com/oscxxrrr/CURSO-DWEC-20262_027.git)
+
+2. **Accede al directorio del proyecto descargado:**
+``` bash
+
+  cd CURSO-DWEC-20262_027
+
+3. **Instala las dependencias necesarias que figuran en el proyecto:**
+``` bash
+
+  npm install
+
+4. **Ejecuta y prueba los ejercicios:**
+
+    Para iniciar el servidor de desarrollo y probar las prácticas interactivas en tiempo real:
+    ``` bash
+
+    npm run dev
+
+5. **Si deseas compilar el código TypeScript a JavaScript de forma manual:**
+    ``` bash
+
+    npx tsc
