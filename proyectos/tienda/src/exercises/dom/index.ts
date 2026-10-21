@@ -71,4 +71,4 @@ console.log("Estoy en index.ts");
 // ejercicio casa: crear variables que apunten a cada uno de los elementos del DOM diseñados en el index.html
 
 const section = document.querySelector("#controls");
-if (!(section instanceof ))
+if (!(section instanceof )) 
