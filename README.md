@@ -32,8 +32,6 @@ El código está estructurado para abordar diferentes conceptos clave de TypeScr
 - **Programación Orientada a Objetos (POO):** Clases, modificadores de acceso, herencia e implementación de interfaces.
 - **Funciones y Genéricos:** Uso de funciones tipadas y componentes reutilizables mediante genéricos.
 - **Manipulación del DOM y Eventos:** Prácticas orientadas a la interacción dinámica en páginas web.
-- **Asincronía:** Promesas, `async/await` y consumo de APIs.
-
 ---
 
 ## 🚀 Cómo ejecutar las prácticas localmente
