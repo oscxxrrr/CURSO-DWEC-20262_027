@@ -38,7 +38,7 @@ El código está estructurado para abordar diferentes conceptos clave de TypeScr
 
 ## 🚀 Cómo ejecutar las prácticas localmente
 
-Para poner en marcha y probar los scripts o proyectos de este repositorio en tu equipo, sigue estos pasos:
+Para poner en marcha y probar las prácticas de este repositorio en tu equipo, sigue estos pasos:
 
 1. Clona el repositorio:
    ```bash
