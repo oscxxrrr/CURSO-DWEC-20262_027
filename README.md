@@ -9,7 +9,7 @@
 
 Este repositorio contiene la recopilación de **ejercicios prácticos, laboratorios y bloques de código en TypeScript** desarrollados durante el segundo curso del Ciclo Formativo de Grado Superior en Desarrollo de Aplicaciones Web (DAW) en el **I.E.S. Politécnico Hermenegildo Lanz**.
 
-El objetivo de este espacio es afianzar la programación orientada a objetos, el tipado estático, la modularidad y el desarrollo moderno del lado del cliente.
+El objetivo de este espacio es afianzar la programación orientada a objetos, el tipado estático, la modularidad y el desarrollo moderno del lado del cliente utilizando un entorno optimizado con **WSL**.
 
 ---
 
@@ -20,7 +20,7 @@ El objetivo de este espacio es afianzar la programación orientada a objetos, el
 ![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
 ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
 ![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)
-![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
+![WSL](https://img.shields.io/badge/WSL-0078D6?style=for-the-badge&logo=linux&logoColor=white)
 
 ---
 
@@ -38,7 +38,7 @@ El código está estructurado para abordar diferentes conceptos clave de TypeScr
 
 ## 🚀 Cómo ejecutar las prácticas localmente
 
-Para poner en marcha y probar las prácticas de este repositorio en tu equipo, sigue estos pasos:
+Para poner en marcha y probar las prácticas de este repositorio en tu equipo (preferiblemente desde tu terminal en WSL), sigue estos pasos:
 
 1. Clona el repositorio:
    ```bash
