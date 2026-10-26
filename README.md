@@ -10,7 +10,7 @@
 
 ## 📌 Sobre el Proyecto
 
-Este repositorio contiene el desarrollo de una aplicación web de **gestión de tareas (Task Manager)** desarrollada en **PHP** y **MySQL** como parte de las prácticas del Ciclo Formativo de Grado Superior en Desarrollo de Aplicaciones Web (DAW) en el **I.E.S. Politécnico Hermenegildo Lanz**.
+Este repositorio contiene el desarrollo de una aplicación web de **gestión de tareas (Task Manager)** desarrollada en **PHP** y **MySQL** --> Grado Superior en Desarrollo de Aplicaciones Web (DAW) en el **I.E.S. Politécnico Hermenegildo Lanz**.
 
 El proyecto está enfocado en la implementación de la lógica del lado del servidor, la persistencia de datos mediante bases de datos relacionales y la realización de operaciones **CRUD** completas.
 
@@ -24,8 +24,6 @@ El proyecto está enfocado en la implementación de la lógica del lado del serv
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
 ![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)
-![WSL](https://img.shields.io/badge/WSL-0078D6?style=for-the-badge&logo=linux&logoColor=white)
-
 ---
 
 ## 📂 Funcionalidades y Operaciones Implementadas
@@ -46,3 +44,9 @@ Para poner en marcha la aplicación en tu entorno de desarrollo local (utilizand
 1. **Clona el repositorio:**
    ```bash
    git clone [https://github.com/oscxxrrr/NOMBRE-DEL-REPOSITORIO.git](https://github.com/oscxxrrr/NOMBRE-DEL-REPOSITORIO.git)
+
+ 2. **Abre editor de textos**
+  En una terminal ejecutar
+  ```bash
+php -S localhost:80
+
