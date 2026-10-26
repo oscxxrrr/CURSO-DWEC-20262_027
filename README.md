@@ -45,8 +45,5 @@ Para poner en marcha y probar las prácticas de este repositorio en tu equipo (p
 
 1. **Clona el repositorio:**
 
-   ```bash
+     ```bash
    git clone [https://github.com/oscxxrrr/CURSO-DWEC-20262_027.git](https://github.com/oscxxrrr/CURSO-DWEC-20262_027.git)
-
-
-modifica esto para un repositorio que es una tarea de un administrador de tareas con php y mysql, no añadas cosas raras preguntame anters haber si he hecho eso o no, he trabajado con consultas, insertar, eliminar o consultar datos...
