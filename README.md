@@ -1,7 +1,10 @@
-<!-- ====================== BANNER ====================== -->
+ <!-- ====================== BANNER ====================== -->
+
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:1E3A8A,50:2563EB,100:60A5FA&height=200&section=header&text=Gestor%20de%20Tareas%20-%20PHP%20%26%20MySQL&fontSize=38&fontColor=ffffff&fontAlignY=40&desc=Desarrollo%20Web%20en%20Entorno%20Servidor%20/%20Cliente%20(DAW)&descAlignY=65&descAlign=50&animation=fadeIn" alt="Banner"/>
-</p>
+
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:1E3A8A,50:2563EB,100:60A5FA&height=200&section=header&text=Pr%C3%A1cticas%20en%20TypeScript&fontSize=42&fontColor=ffffff&fontAlignY=40&desc=Desarrollo%20Web%20en%20Entorno%20Cliente%20(DAW)&descAlignY=65&descAlign=50&animation=fadeIn" alt="Banner"/>
+
+</p> 
 
 ---
 
