@@ -1,52 +1,79 @@
-// esta bien pero hay otra mejor
-// const averageText = document.getElementById("average");
+import "./style.css";
+import { createCard, getElement } from "./components/dom";
+import { products } from "./services/products";
 
-import { students } from "./services/students";
-import { average, isPassed } from "./utils/grades";
+const app = getElement("#products", HTMLDivElement);
 
-const averageText = document.querySelector("#average"); // buscar
-const listU = document.querySelector("#student-list");
+const ulProducts = document.createElement("ul");
 
-if (!(averageText instanceof HTMLParagraphElement)) { // comprobar
-  throw new Error("Falta el parrafo con ide average");
+// recorrer products - manera facil
+// for (const p of products) {
+//    ulProducts.append(createCard(p))
+// }
+
+ulProducts.append(...products.map(createCard));
+
+const liTotal = document.createElement("li");
+liTotal.classList.add("card", "total");
+
+const totalStrongText = document.createElement("strong");
+totalStrongText.textContent = "Total : ";
+
+const totalStrong = document.createElement("strong");
+totalStrong.textContent = String(products.reduce((acc, p) => acc + p.price, 0));
+totalStrong.classList.add("card-price");
+// A§adimos ambos elementos (el texto "Total :" y el valor numÇrico) al `liTotal`
+liTotal.append(totalStrongText, totalStrong);
+
+// a§adir elementos a la lista
+ulProducts.append(liTotal);
+
+app.append(ulProducts);
+
+
+
+/*
+  * .append             --> al final
+  * .prepend            --> al principio
+  * .before             --> justo antes de
+  * .after              --> justo despues de
+  * .replaceWith(nuevo) --> en lugar de
+*/
+
+
+// crear una funcion que genere etiquetas con el texto que le paso como parametro y con un array de clases
+
+
+// crear un contador de clics usando button y etiqueta
+
+const section = document.createElement("section");
+
+
+const buttonClicks = document.createElement("button");
+buttonClicks.textContent = `Clicks: 0`;
+buttonClicks.classList.add("btn-cont");
+let cont = 0;
+buttonClicks.onclick = () => {
+  cont++;
+  buttonClicks.textContent = `Clicks: ${cont}`;
+}
+section.append(buttonClicks);
+
+const hr = document.createElement("hr");
+app.append(hr);
+
+app.append(buttonClicks);
+
+const btnReset = document.createElement("button");
+btnReset.textContent = `RESETEAR`;
+btnReset.onclick = () => {
+  cont = 0;
+  buttonClicks.textContent = `Clicks: 0`;
 }
 
-if (!(listU instanceof HTMLUListElement)) {
-  throw new Error("Falta el list con ide student-list");
-}
+app.append(btnReset);
 
-// acciones
-
-// buscar alumno <-- input busqueda
-const inputSearch = document.createElement("input");
-// importantes
-inputSearch.type = "text";
-//estilos
-inputSearch.placeholder = "Escribe nombre para buscar";
-inputSearch.style.backgroundColor = 'gray';
-inputSearch.style.color = "white";
-
-// boton enviar busqueda
-const btnSearch = document.createElement("button");
-btnSearch.textContent = "Buscar";
-btnSearch.onclick =
-
-
-
-  // parrafo
-  averageText.textContent = `Media: ${average(students).toFixed(2)}` //modifica <p id="">AQUI<p>
-
-
-// lista
-for (const student of students) {
-  const item = document.createElement("li"); // creacion li
-  item.textContent = `Estudiante: ${student.name} - Nota: ${student.grade}`; // a√±adiendo contenido li
-  item.style.color = isPassed(student) ? "green" : "red"; // 5 o mas verde, 4 o menos rojo
-  listU.appendChild(item); // a√±adimos LI al UL sera un hijo
-}
-
-averageText.append(inputSearch);
-averageText.append(btnSearch);
+// crear un boton para reiniciar el contador
 
 
 
