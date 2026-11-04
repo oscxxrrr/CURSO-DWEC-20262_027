@@ -1,73 +1,33 @@
-import "./style.css";
-import { createCard, getElement } from "./components/dom";
-import { products } from "./services/products";
-import { mountClickCounter } from "./utils/counter";
+import { createTextSpan, getElement } from "./components/dom";
+import { createInput } from "./components/inputController";
+import { createTable, searchStudent } from "./components/tableController";
+import { students } from "./services/students";
 
+// datos
+
+
+// creacion
 const app = getElement("#products", HTMLDivElement);
+const t1 = createTextSpan("Usuarios: ", ["t1"]);
+const input = createInput("Nombre usuario... ", ["in1"]);
+let table = createTable(students, ["table1"]);
 
-const ulProducts = document.createElement("ul");
-
-// recorrer products - manera facil
-// for (const p of products) {
-//    ulProducts.append(createCard(p))
-// }
-
-ulProducts.append(...products.map(createCard));
-
-const liTotal = document.createElement("li");
-liTotal.classList.add("card", "total");
-
-const totalStrongText = document.createElement("strong");
-totalStrongText.textContent = "Total : ";
-
-const totalStrong = document.createElement("strong");
-totalStrong.textContent = String(products.reduce((acc, p) => acc + p.price, 0));
-totalStrong.classList.add("card-price");
-// A¤adimos ambos elementos (el texto "Total :" y el valor num‚rico) al `liTotal`
-liTotal.append(totalStrongText, totalStrong);
-
-// a¤adir elementos a la lista
-ulProducts.append(liTotal);
-
-app.append(ulProducts);
+// estilo t1
+t1.style.fontSize = "24px";
+t1.style.fontWeight = "bold";
 
 
+// manejo input
 
-/*
-  * .append             --> al final
-  * .prepend            --> al principio
-  * .before             --> justo antes de
-  * .after              --> justo despues de
-  * .replaceWith(nuevo) --> en lugar de
-*/
+// search
+input.addEventListener("keydown", (event) => {
+  if (event.key === "Enter") {
+    const newTable = searchStudent(input.value, ["table1"]);
+    table.replaceWith(newTable);
+    table = newTable; // Actualiza la tabla actual
+  }
+});
 
+const br = document.createElement("br");
 
-// crear una funcion que genere etiquetas con el texto que le paso como parametro y con un array de clases
-
-
-// crear un contador de clics usando button y etiqueta
-
-
-
-
-
-
-
-// BOTONES
-const section = document.createElement("section");
-const buttonClicks = document.createElement("button");
-const btnReset = document.createElement("button");
-
-buttonClicks.textContent = `Clicks: 0`;
-btnReset.textContent = `Reset`;
-
-mountClickCounter(buttonClicks, btnReset);
-
-const hr = document.createElement("hr");
-section.append(buttonClicks, btnReset);
-app.append(hr, section);
-
-
-
-
-
+app.append(t1, br, input, table);
