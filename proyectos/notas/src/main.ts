@@ -1,6 +1,7 @@
 import "./style.css";
 import { createCard, getElement } from "./components/dom";
 import { products } from "./services/products";
+import { mountClickCounter } from "./utils/counter";
 
 const app = getElement("#products", HTMLDivElement);
 
@@ -46,34 +47,26 @@ app.append(ulProducts);
 
 // crear un contador de clics usando button y etiqueta
 
+
+
+
+
+
+
+// BOTONES
 const section = document.createElement("section");
-
-
 const buttonClicks = document.createElement("button");
+const btnReset = document.createElement("button");
+
 buttonClicks.textContent = `Clicks: 0`;
-buttonClicks.classList.add("btn-cont");
-let cont = 0;
-buttonClicks.onclick = () => {
-  cont++;
-  buttonClicks.textContent = `Clicks: ${cont}`;
-}
-section.append(buttonClicks);
+btnReset.textContent = `Reset`;
+
+mountClickCounter(buttonClicks, btnReset);
 
 const hr = document.createElement("hr");
-app.append(hr);
+section.append(buttonClicks, btnReset);
+app.append(hr, section);
 
-app.append(buttonClicks);
-
-const btnReset = document.createElement("button");
-btnReset.textContent = `RESETEAR`;
-btnReset.onclick = () => {
-  cont = 0;
-  buttonClicks.textContent = `Clicks: 0`;
-}
-
-app.append(btnReset);
-
-// crear un boton para reiniciar el contador
 
 
 
