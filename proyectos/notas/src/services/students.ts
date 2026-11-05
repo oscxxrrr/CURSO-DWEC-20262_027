@@ -7,4 +7,8 @@ export const students: Student[] = [
   { name: 'Marta', grade: 6.25 },
   { name: 'Ivan', grade: 9 },
   { name: 'Sara', grade: 3.5 },
+  { name: 'Anabel', grade: 3.5 },
+  { name: 'Mario', grade: 3.5 },
+  { name: 'Marina', grade: 3.5 },
+  { name: 'Myke', grade: 3.5 },
 ];

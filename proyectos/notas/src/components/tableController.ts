@@ -1,6 +1,7 @@
+import type { Product } from "../types/product";
 import type { Student } from "../types/student";
 
-export function createTable(alumnos: Student[], cssArray: string[]): HTMLTableElement {
+export function createTableStudents(alumnos: Student[], cssArray: string[]): HTMLTableElement {
   const table = document.createElement("table");
   table.classList.add(...cssArray);
 
@@ -19,13 +20,28 @@ export function createTable(alumnos: Student[], cssArray: string[]): HTMLTableEl
   return table;
 }
 
-import { students } from "../services/students";
+export function createTableProducts(productos: Product[], cssArray: string[]): HTMLTableElement {
+  const table = document.createElement("table");
+  table.classList.add(...cssArray);
 
-export function searchStudent(name: string, cssArray: string[]): HTMLTableElement {
+  productos.forEach(p => {
+    const tr = document.createElement("tr");
+    const tdNombre = document.createElement("td");
+    const tdPrecio = document.createElement("td");
+    const tdStock = document.createElement("td");
+    const tdId = document.createElement("td");
 
-  const filter = students.filter(s =>
-    s.name.includes(name)
-  );
+    tdId.textContent = String(p.id);
+    tdNombre.textContent = p.name;
+    tdPrecio.textContent = String(p.price);
+    tdStock.textContent = String(p.stock);
 
-  return createTable(filter, cssArray);
+
+    tr.append(tdId, tdNombre, tdPrecio, tdStock);
+    table.append(tr);
+  });
+
+  return table;
 }
+
+
