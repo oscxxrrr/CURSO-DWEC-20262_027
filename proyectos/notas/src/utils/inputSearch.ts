@@ -30,7 +30,7 @@ export function searchInputProduct(input: HTMLInputElement, table: HTMLTableElem
     let valor = input.value;
     const cssArray = Array.from(table.classList);
     const newTable = searchProduct(valor, cssArray);
-    table.replaceWith(newTable);
+    // table.replaceWith(newTable);
     table = newTable;
   });
   return table;

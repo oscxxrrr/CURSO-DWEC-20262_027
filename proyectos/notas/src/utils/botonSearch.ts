@@ -9,8 +9,7 @@ function searchStudent(name: string, cssArray: string[]): HTMLTableElement {
 
 export function searchNameBtn(btn: HTMLButtonElement, table: HTMLTableElement, input: HTMLInputElement): HTMLTableElement {
 
-  btn.onclick = (event) => {
-    event.preventDefault();
+  btn.onclick = () => {
     const name = input.value;
 
     const student = students.find((s) => s.name === name);
@@ -38,8 +37,7 @@ function searchProduct(name: string, cssArray: string[]): HTMLTableElement {
 
 export function searchProductBtn(btn: HTMLButtonElement, table: HTMLTableElement, input: HTMLInputElement): HTMLTableElement {
 
-  btn.onclick = (event) => {
-    event.preventDefault();
+  btn.onclick = () => {
     const name = input.value;
 
     const product = products.find((p) => p.name === name);

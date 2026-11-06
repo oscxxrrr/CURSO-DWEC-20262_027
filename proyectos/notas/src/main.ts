@@ -12,6 +12,7 @@ import { searchInputProduct, searchInputStudent } from "./utils/inputSearch";
 
 // creacion
 const app = getElement("#products", HTMLDivElement);
+
 const t1 = createTextSpan("Usuarios: ", ["t1"]);
 const inputName = createInput("Nombre usuario... ", ["in1"]);
 let tableName = createTableStudents(students, ["table1"]);
