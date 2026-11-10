@@ -45,6 +45,6 @@ searchNameBtn(btnSearchName, tableName, inputName);
 searchInputProduct(inputProduct, tableProduct);
 
 // manejo boton buscar producto
-searchProductBtn(btnSearchProduct, tableProduct, inputProduct)
+searchProductBtn(btnSearchProduct, tableProduct, inputProduct);
 
 app.append(t1, inputName, btnSearchName, tableName, t2, inputProduct, btnSearchProduct, tableProduct);

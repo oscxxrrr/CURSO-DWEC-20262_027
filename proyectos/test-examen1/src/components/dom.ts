@@ -44,6 +44,23 @@ export function createProductLi(product: Product): HTMLLIElement {
   button.type = "button";
   button.textContent = "Borrar";
 
-  item.append(text, button);
+  const btnFavs = document.createElement("button");
+  button.type = "button";
+  btnFavs.textContent = "☆";
+  btnFavs.style.marginLeft = "8px";
+
+  item.append(text, button, btnFavs);
   return item;
 }
+
+// componente5 : crear footer:
+export function createFooter(name: string): HTMLElement {
+  const footer = document.createElement("footer");
+
+  footer.textContent = name;
+  footer.style.color = "white";
+  footer.style.background = "grey";
+  return footer;
+}
+
+
