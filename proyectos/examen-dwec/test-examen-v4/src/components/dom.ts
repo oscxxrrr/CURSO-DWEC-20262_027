@@ -1,5 +1,6 @@
 // vamos a construir las piezas que aparecen por pantalla
 
+import { DEFAULT_COVER, initialBooks } from "../services/books";
 import type { Book } from "../types/book";
 
 export function getElements<T extends Element>(selector: string, type: new () => T): T {
@@ -33,40 +34,7 @@ export function createList(): HTMLUListElement {
   return list;
 }
 
-export function createBookForm(): HTMLFormElement {
-  const form = document.createElement("form");
-  const inputTitle = document.createElement("input");
-  const inputAuthor = document.createElement("input");
-  const inputYear = document.createElement("input");
-  const btnAdd = document.createElement("button");
-
-  inputTitle.placeholder = "Titulo";
-  inputTitle.name = "title";
-  inputAuthor.required = true;
-
-  inputAuthor.placeholder = "Autor";
-  inputAuthor.name = "author";
-  inputAuthor.required = true;
-
-  inputYear.placeholder = "Año";
-  inputYear.name = "year";
-  inputYear.type = "number";
-
-  btnAdd.textContent = "Añadir";
-  btnAdd.type = "submit";
-  btnAdd.addEventListener("click", () => {
-
-  });
-
-  form.append(inputTitle, inputAuthor, inputYear, btnAdd);
-  return form;
-}
-
-export function createBookItem(
-  book: Book,
-  onToggleFavorite: (id: number) => void,
-  onDelete: (id: number) => void
-): HTMLLIElement {
+export function createBookItem(book: Book, onToggleFavorite: (id: number) => void, onDelete: (id: number) => void): HTMLLIElement {
   const item = document.createElement("li");
   const cover = document.createElement("img");
   const title = document.createElement("strong");
@@ -93,4 +61,33 @@ export function createBookItem(
   item.append(cover, title, span, btnFav, btnDelete);
   return item;
 }
+
+
+export function createBookForm(): HTMLFormElement {
+  const form = document.createElement("form");
+  const inputTitle = document.createElement("input");
+  const inputAuthor = document.createElement("input");
+  const inputYear = document.createElement("input");
+  const btnAdd = document.createElement("button");
+
+  inputTitle.placeholder = "Titulo";
+  inputTitle.name = "title";
+  inputAuthor.required = true;
+
+  inputAuthor.placeholder = "Autor";
+  inputAuthor.name = "author";
+  inputAuthor.required = true;
+
+  inputYear.placeholder = "Año";
+  inputYear.name = "year";
+  inputYear.type = "number";
+
+  btnAdd.textContent = "Añadir";
+  btnAdd.type = "submit";
+
+
+  form.append(inputTitle, inputAuthor, inputYear, btnAdd);
+  return form;
+}
+
 
