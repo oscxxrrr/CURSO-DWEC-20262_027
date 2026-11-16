@@ -11,7 +11,7 @@
 import type { Book } from "../types/book";
 
 // Portada para los libros que se añaden con el formulario
-export const DEFAULT_COVER = "/covers/sin-portada.svg";
+export const DEFAULT_COVER = "/covers/sin_portada.jpg";
 
 export const initialBooks: readonly Book[] = [
   { id: 1, title: "Harry Potter y la piedra filosofal", author: "J.K. Rowling", year: 1997, cover: "/covers/libro-1.jpg", favorite: false },
