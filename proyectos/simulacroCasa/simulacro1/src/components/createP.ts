@@ -1,5 +1,5 @@
 export function createP(): HTMLParagraphElement {
   const text = document.createElement("p");
-  text.textContent = `Total articulos: 0`;
+  text.textContent = `Mostrando 10 de 10 · favoritos: 0`;
   return text;
 }

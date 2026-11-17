@@ -20,6 +20,9 @@ export function createForm(): HTMLFormElement {
   btnAñadir.textContent = "Añadir";
   btnAñadir.type = "submit";
 
+  form.noValidate = true; // evitar los avisos q por defecto genera html. Nosotros programaremos nuestros propios avisos.
+
+
   form.append(inputTitle, inputAuthor, inputYear, btnAñadir);
   return form;
 }

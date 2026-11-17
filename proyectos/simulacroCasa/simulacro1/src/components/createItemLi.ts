@@ -1,3 +1,5 @@
+import type { Book } from "../types/book";
+
 export function createBookItem(book: Book, onToggleFavorite: (id: number) => void, onDelete: (id: number) => void): HTMLLIElement {
   const item = document.createElement("li");
   const cover = document.createElement("img");
