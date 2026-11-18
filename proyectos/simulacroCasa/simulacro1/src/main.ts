@@ -6,6 +6,7 @@ import { createTitle } from "./components/createTitle";
 import { createUlist } from "./components/createUlist";
 import { getElement } from "./components/getElements";
 import { DEFAULT_COVER, initialBooks } from "./services/books";
+import { loadBooks, saveBooks } from "./services/storage";
 // import { contador } from "./services/contador";
 import "./style.css";
 import type { AppState, Book } from "./types/book";
@@ -23,15 +24,17 @@ formError.tabIndex = -1;
 form.append(formError);
 const paragraph = createP();
 
+const storageMessage = document.createElement("p");
+storageMessage.setAttribute("role", "status");
+
 
 // imprimir por pantalla
-const savedBooks = localStorage.getItem("books");
 let state: AppState = {
-  books: savedBooks ? JSON.parse(savedBooks) : initialBooks,
+  books: loadBooks() ?? initialBooks,
   search: ""
 };
 
-app.append(createTitle("Simulacro 1 - LIBRERIA", "h1"), input, form, paragraph, list);
+app.append(createTitle("Simulacro 1 - LIBRERIA", "h1"), input, form, paragraph, storageMessage, list);
 
 
 function render(): void {
@@ -56,7 +59,7 @@ function toggleFav(id: Number) {
     ...state,
     books: updateBooks
   };
-  localStorage.setItem("books", JSON.stringify(updateBooks));
+  persistentBook();
   render();
 }
 function deleteBook(id: Number) {
@@ -66,8 +69,12 @@ function deleteBook(id: Number) {
     ...state,
     books: updateBooks
   };
-  localStorage.setItem("books", JSON.stringify(updateBooks));
+  persistentBook();
   render();
+}
+
+function persistentBook(): void {
+  storageMessage.textContent = saveBooks(state.books) ? "" : "No se ha podido guardar en el localstorage";
 }
 
 // ----------- eventos ------------------
@@ -109,10 +116,10 @@ form.addEventListener("submit", (event) => {
   formError.textContent = "";
 
   const newBook: Book = {
-    id: Math.max(...state.books.map(b => b.id), 0) + 1,
-    title: title,
-    author: author,
-    year: year,
+    id: Math.max(...state.books.map(b => b.id)) + 1,
+    title, // --> no hace falta se llama igual
+    author,
+    year,
     cover: DEFAULT_COVER,
     favorite: false
   };
@@ -122,22 +129,11 @@ form.addEventListener("submit", (event) => {
     books: [...state.books, newBook]
   };
 
-  localStorage.setItem("books", JSON.stringify(state.books));
+  persistentBook();
   form.reset();
   render();
 
 });
-
-
-
-
-// ----------- inicio de app ------------
-// Nos aseguramos de guardarlo al inicio por si estaba vac¡o
-if (!savedBooks) {
-  localStorage.setItem("books", JSON.stringify(state.books));
-}
-
-
 
 render();
 
